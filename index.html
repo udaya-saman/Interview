@@ -100,61 +100,8 @@
   .tab-btn.active svg{ stroke:var(--citrus-deep); }
 
   /* ---------- HOME ---------- */
-  #tab-home{ padding-bottom:calc(96px + var(--safe-bottom)); }
-  .hero{
-    position:relative;
-    width:100%;
-    line-height:0;
-  }
-  .hero-img{ width:100%; height:auto; display:block; }
-  .hero::after{
-    content:"";
-    position:absolute; left:0; right:0; bottom:0; height:230px;
-    background:linear-gradient(to top, rgba(6,22,36,0.85) 0%, rgba(6,22,36,0.0) 100%);
-    pointer-events:none;
-  }
-  .hero-copy{
-    position:absolute; left:0; right:0; bottom:104px;
-    padding:0 20px;
-    color:#fff;
-    z-index:2;
-    text-align:center;
-  }
-  .hero-copy p{ font-size:14.5px; opacity:0.95; margin-bottom:14px; line-height:1.4; }
-  .hero-btn{
-    display:inline-flex; align-items:center; gap:8px;
-    background:var(--citrus);
-    color:#fff;
-    border:none;
-    padding:14px 26px;
-    border-radius:999px;
-    font-size:15.5px;
-    font-weight:700;
-    cursor:pointer;
-    box-shadow:0 10px 22px rgba(0,0,0,0.28);
-  }
-
-  .home-links{ padding:22px 20px 4px; display:flex; flex-direction:column; gap:12px; }
-  .quick-link{
-    display:flex; align-items:center; gap:14px;
-    background:var(--white);
-    border:1px solid var(--sand-line);
-    border-radius:14px;
-    padding:14px 16px;
-    cursor:pointer;
-    text-align:left;
-    width:100%;
-  }
-  .quick-link .ql-icon{
-    flex:0 0 auto;
-    width:40px; height:40px;
-    border-radius:10px;
-    background:var(--sea-light);
-    display:flex; align-items:center; justify-content:center;
-  }
-  .quick-link .ql-icon svg{ width:20px; height:20px; stroke:var(--sea-deep); fill:none; stroke-width:1.7; }
-  .quick-link .ql-text b{ display:block; font-size:15.5px; }
-  .quick-link .ql-text span{ display:block; font-size:13px; color:var(--ink-soft); margin-top:2px; }
+  #tab-home{ padding: 0; overflow: hidden; height: 100vh; }
+  .hero-img{ width: 100%; height: 100%; object-fit: cover; display: block; }
 
   /* ---------- MYSELF ---------- */
   .letter{
@@ -394,10 +341,85 @@
 
   <!-- ============ HOME ============ -->
   <section class="tab-panel active" id="tab-home">
-    <div class="hero">
-      <img class="hero-img" src="images/bg.jpg" alt="Welcome to Israel">
+    <img class="hero-img" src="images/bg.jpg" alt="Welcome to Israel">
+  </section>
+
+  <!-- ============ MYSELF ============ -->
+  <section class="tab-panel" id="tab-myself">
+    <div class="content">
+      <div class="tab-head">
+        <h2>Myself</h2>
+        <div class="sub">Your self-introduction. Read it a few times until it feels natural to say.</div>
+      </div>
+      <div class="letter" id="myself-letter"></div>
+      <div class="letter-hint">
+        <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><line x1="12" y1="11" x2="12" y2="16"/><circle cx="12" cy="8" r="0.5" fill="currentColor"/></svg>
+        <span>You don't need to memorise this word for word &mdash; speak it in your own natural rhythm. The interviewer wants to hear you, not a recording.</span>
+      </div>
+      <button class="edit-details-btn" data-goto="profile">Edit my details</button>
     </div>
   </section>
+
+  <!-- ============ QUESTIONS ============ -->
+  <section class="tab-panel" id="tab-questions">
+    <div class="content">
+      <div class="tab-head">
+        <h2>Practice questions</h2>
+        <div class="sub">Ten questions you're likely to be asked. Tap a card to reveal the answer.</div>
+      </div>
+      <div class="qlist" id="qlist"></div>
+    </div>
+  </section>
+
+  <!-- ============ READY ============ -->
+  <section class="tab-panel" id="tab-ready">
+    <div class="content">
+      <div class="tab-head">
+        <h2>Document checklist</h2>
+        <div class="sub">Tick off each item as you get it ready.</div>
+      </div>
+      <div class="progress-row">
+        <div class="progress-track"><div class="progress-fill" id="progress-fill"></div></div>
+        <div class="progress-label" id="progress-label">0 of 10 ready</div>
+      </div>
+      <div class="ticket" id="ticket-list"></div>
+      <div class="ready-note">
+        <svg viewBox="0 0 24 24"><path d="M12 2l9 4.5v5c0 5-3.8 8.6-9 10.5-5.2-1.9-9-5.5-9-10.5v-5L12 2z"/></svg>
+        <p><b>Note</b>You should bring all original documents and their copies.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ PROFILE ============ -->
+  <section class="tab-panel" id="tab-profile">
+    <div class="content">
+      <div class="tab-head">
+        <h2>Profile</h2>
+        <div class="sub">This fills in your details on the Myself page.</div>
+      </div>
+      <div class="profile-card">
+        <form id="profile-form">
+          <div class="field">
+            <label for="pf-name">Your name</label>
+            <input id="pf-name" type="text" autocomplete="name" required>
+          </div>
+          <div class="field">
+            <label for="pf-town">Your town</label>
+            <input id="pf-town" type="text" autocomplete="address-level2" required>
+          </div>
+          <div class="field">
+            <label for="pf-shop">Shop / workplace name</label>
+            <input id="pf-shop" type="text" required>
+          </div>
+          <button type="submit" class="save-btn">Save details</button>
+        </form>
+      </div>
+      <div class="danger-zone">
+        <button class="danger-link" id="reset-app">Reset all app data</button>
+      </div>
+    </div>
+  </section>
+
 </div>
 
 <!-- ============ Bottom tab bar ============ -->
