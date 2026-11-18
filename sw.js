@@ -1,6 +1,6 @@
 // Bump this version string whenever you update index.html, styles, or content,
 // so returning visitors get the fresh copy instead of a stale cached one.
-var CACHE_NAME = "israel-prep-v4";
+var CACHE_NAME = "israel-prep-v5";
 
 var CORE_ASSETS = [
   "./",
