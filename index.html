@@ -333,6 +333,22 @@
   @media (prefers-reduced-motion: reduce){
     *{ transition-duration:0.001ms !important; animation-duration:0.001ms !important; }
   }
+  .memory-art{margin:14px 0 2px;padding:15px 12px 13px;border-radius:14px;text-align:center;background:linear-gradient(135deg,#e8f9f3,#eaf1ff);border:1px solid #d9e8e4;overflow:hidden;}
+  .memory-art[data-topic="Personal"]{background:linear-gradient(135deg,#fff0dc,#fff6ea);border-color:#f6dcc0;}
+  .memory-art[data-topic="Job Skills"]{background:linear-gradient(135deg,#e5f5ff,#e6eeff);border-color:#d3e3f7;}
+  .memory-art[data-topic="Customer Service"]{background:linear-gradient(135deg,#ffe9ef,#fff4e6);border-color:#f5dce4;}
+  .memory-art[data-topic="Safety & Hygiene"]{background:linear-gradient(135deg,#e6f8e8,#f4f9df);border-color:#d3e9d3;}
+  .memory-art[data-topic="Israel & Rules"]{background:linear-gradient(135deg,#e8edff,#f0eaff);border-color:#dce0fa;}
+  .memory-art[data-topic="Situational"]{background:linear-gradient(135deg,#fff4cd,#ffe9da);border-color:#f1dfb9;}
+  .memory-icons{display:flex;justify-content:center;align-items:center;gap:12px;margin-bottom:10px;}
+  .memory-icons span{display:grid;place-items:center;width:66px;height:66px;font-size:40px;line-height:1;border-radius:22px;background:#fff;box-shadow:0 4px 12px rgba(45,69,86,.09);font-family:"Apple Color Emoji","Segoe UI Emoji","Noto Color Emoji",sans-serif;}
+  .memory-cue{font-size:14px;font-weight:750;letter-spacing:.01em;color:#243a49;overflow-wrap:anywhere;}
+  .good-luck-card{margin-top:22px;overflow:hidden;border-radius:21px;border:1px solid #d6e6dc;background:linear-gradient(155deg,#fff9e6,#eaf7f1);text-align:center;box-shadow:0 8px 24px rgba(38,90,78,.08);}
+  .luck-art{display:block;width:100%;height:auto;max-height:215px;}
+  .luck-copy{padding:15px 20px 25px;}
+  .luck-kicker{font-size:10px;letter-spacing:.16em;font-weight:800;color:#397d73;}
+  .luck-copy h3{margin:5px 0 9px;font-size:32px;line-height:1.15;color:#1e5a52;}
+  .luck-copy p{margin:0;font-size:15px;line-height:1.6;color:#365b53;}
 </style>
 </head>
 <body>
@@ -349,7 +365,7 @@
     <div class="content">
       <div class="tab-head">
         <h2>Myself</h2>
-        <div class="sub">Your self-introduction. Read it a few times until it feels natural to say. Add your actual duties and current employment in Profile; your service certificate confirms past employment only.</div>
+        <div class="sub">Practise this simple introduction. The suggested grocery store duties are examples for your role; confirm or edit them in Profile before using them.</div>
       </div>
       <div class="letter" id="myself-letter"></div>
       <div class="letter-hint">
@@ -365,7 +381,7 @@
     <div class="content">
       <div class="tab-head">
         <h2>Practice questions</h2>
-        <div class="sub">96 practice questions for your Israel job interview. Tap a card to reveal the answer. Use the suggested answers only if they are true for you; replace any bracketed details with your real information.</div>
+        <div class="sub">98 questions. Tap a card for a short model answer and a colorful memory cue. Practise the answers, and adapt personal or official details to your circumstances.</div>
       </div>
       <div class="qlist" id="qlist"></div>
     </div>
@@ -383,9 +399,21 @@
         <div class="progress-label" id="progress-label">0 of 2 ready</div>
       </div>
       <div class="ticket" id="ticket-list"></div>
-      <div class="ready-note">
-        <svg viewBox="0 0 24 24"><path d="M12 2l9 4.5v5c0 5-3.8 8.6-9 10.5-5.2-1.9-9-5.5-9-10.5v-5L12 2z"/></svg>
-        <p><b>Wishing you the very best!</b>Believe in yourself, stay calm, and speak with confidence. May all your hard work pay off, and may you successfully pass your interview in Israel. Good luck on your new journey!</p>
+      <div class="good-luck-card">
+        <svg class="luck-art" viewBox="0 0 320 158" role="img" aria-label="A golden trophy surrounded by stars and a rising sun, celebrating a successful interview">
+          <defs><linearGradient id="trophyGold" x2="0" y2="1"><stop stop-color="#fff1a0"/><stop offset="1" stop-color="#efa932"/></linearGradient></defs>
+          <circle cx="160" cy="80" r="70" fill="#fff5c9" opacity=".85"/>
+          <path d="M20 135 Q75 90 120 138 T230 130 T320 135 V158 H0Z" fill="#a8dcd2"/>
+          <path d="M0 148 Q60 120 120 151 T240 145 T320 148 V158 H0Z" fill="#73b9ac"/>
+          <g fill="none" stroke="#dfa841" stroke-width="7" stroke-linecap="round"><path d="M119 47H92v13q0 25 32 29M201 47h27v13q0 25-32 29"/></g>
+          <path d="M116 37h88v23q0 42-44 51-44-9-44-51Z" fill="url(#trophyGold)" stroke="#d39028" stroke-width="2"/>
+          <path d="M153 103h14v25h-14z" fill="#d39028"/><rect x="132" y="125" width="56" height="10" rx="4" fill="#bc7d29"/><rect x="120" y="134" width="80" height="13" rx="5" fill="#965e23"/>
+          <path d="m160 50 6 12 14 2-10 10 2 14-12-7-12 7 2-14-10-10 14-2Z" fill="#fffaf0"/>
+          <g fill="#f9b642"><path d="m49 22 4 11 11 4-11 4-4 11-4-11-11-4 11-4Z"/><path d="m267 45 4 12 12 4-12 4-4 12-4-12-12-4 12-4Z"/><path d="m237 12 3 7 7 3-7 3-3 7-3-7-7-3 7-3Z"/></g>
+          <g stroke-width="4" stroke-linecap="round"><path d="m31 86 7 9M81 12l6 9M289 108l-8 8" stroke="#eb826e"/><path d="m70 102 10-7m173 2 8 8m-40-85-4 8" stroke="#47a99d"/></g>
+          <circle cx="24" cy="59" r="4" fill="#47a99d"/><circle cx="296" cy="23" r="4" fill="#eb826e"/>
+        </svg>
+        <div class="luck-copy"><div class="luck-kicker">YOUR NEXT CHAPTER</div><h3>Good luck!</h3><p>Believe in yourself. Stay calm, speak with confidence and do your best. Wishing you every success in your Israel job interview!</p></div>
       </div>
     </div>
   </section>
@@ -408,7 +436,7 @@
             <input id="pf-town" type="text" autocomplete="address-level2" required>
           </div>
           <div class="field"><label>Previous workplace (service certificate)</label><input type="text" value="Siyarata Stores, Matara" readonly></div>
-          <div class="field"><label for="pf-duties">Previous duties (enter only actual duties)</label><input id="pf-duties" type="text" placeholder="e.g. arranging products, helping customers"></div>
+          <div class="field"><label for="pf-duties">Previous duties (confirm or edit the suggested duties)</label><input id="pf-duties" type="text" placeholder="e.g. arranging products, helping customers" value="helping customers, packing groceries, arranging products on shelves, replenishing stock and keeping the store clean and organized"></div>
           <div class="field"><label for="pf-current">Current job and workplace (optional)</label><input id="pf-current" type="text" placeholder="Your actual current job"></div>
           <div class="field"><label for="pf-current-duties">Current job duties (optional)</label><input id="pf-current-duties" type="text" placeholder="Your actual responsibilities"></div>
           <button type="submit" class="save-btn">Save details</button>
@@ -463,7 +491,7 @@
         <input id="ob-town" type="text" autocomplete="address-level2" required>
       </div>
       <div class="field"><label>Previous workplace (service certificate)</label><input type="text" value="Siyarata Stores, Matara" readonly></div>
-          <div class="field"><label for="ob-duties">Previous duties (enter only actual duties)</label><input id="ob-duties" type="text" placeholder="e.g. arranging products, helping customers"></div>
+          <div class="field"><label for="ob-duties">Previous duties (confirm or edit the suggested duties)</label><input id="ob-duties" type="text" placeholder="e.g. arranging products, helping customers" value="helping customers, packing groceries, arranging products on shelves, replenishing stock and keeping the store clean and organized"></div>
           <div class="field"><label for="ob-current">Current job and workplace (optional)</label><input id="ob-current" type="text" placeholder="Your actual current job"></div>
           <div class="field"><label for="ob-current-duties">Current job duties (optional)</label><input id="ob-current-duties" type="text" placeholder="Your actual responsibilities"></div>
       <button type="submit" class="save-btn">Get started</button>
@@ -485,491 +513,696 @@
   {
     "tag": "Personal",
     "q": "Good morning. Can you please introduce yourself?",
-    "a": "Good morning. Thank you for this opportunity. My name is [your name], and I am from Sri Lanka. I worked as a Grocery Store Assistant at Siyarata Stores in Matara from November 2020 to April 2022. I am hardworking, trustworthy and willing to learn. I am ready to work responsibly and support my team in Israel."
+    "a": "Good morning. Thank you for this opportunity. My name is [your name]. I am from Sri Lanka. I worked as a Grocery Store Assistant at Siyarata Stores. I am hardworking, reliable and willing to learn.",
+    "icon": "👋 🇱🇰",
+    "cue": "Introduce yourself"
   },
   {
     "tag": "Personal",
     "q": "What is your previous work experience and where did you work?",
-    "a": "I worked as a Grocery Store Assistant at Siyarata Stores in Kotuwegoda, Matara, Sri Lanka, from 1 November 2020 to 30 April 2022."
+    "a": "I worked as a Grocery Store Assistant at Siyarata Stores in Matara from November 2020 to April 2022.",
+    "icon": "🏪 📅",
+    "cue": "Store · dates"
   },
   {
     "tag": "Personal",
     "q": "What were your main duties in your previous job?",
-    "a": "As a Grocery Store Assistant, I supported the daily work of the store. My duties included [your actual duties]."
+    "a": "My duties included [your actual duties].",
+    "icon": "📦 🛒",
+    "cue": "Stock · customers · cleaning"
   },
   {
     "tag": "Personal",
     "q": "Why did you leave your last job?",
-    "a": "I am grateful for the experience I gained in my previous job. I left because [your actual reason], and I am now looking forward to a new opportunity."
+    "a": "I wanted a better career opportunity and a chance to develop my skills.",
+    "icon": "🚪 🌱",
+    "cue": "New opportunity",
+    "tip": "Use this reason if it matches your situation."
   },
   {
     "tag": "Personal",
     "q": "What are your greatest strengths?",
-    "a": "I am hardworking, trustworthy, punctual and responsible. I follow instructions carefully and enjoy working as part of a team."
+    "a": "I am hardworking, trustworthy and responsible. I work well with others.",
+    "icon": "💪 🤝",
+    "cue": "Hardworking · reliable"
   },
   {
     "tag": "Personal",
     "q": "What is one area you are improving?",
-    "a": "I am improving my spoken English. I practise regularly so that I can communicate more clearly and confidently at work."
+    "a": "I am improving my spoken English by practising every day.",
+    "icon": "🗣️ 📚",
+    "cue": "Practise English"
   },
   {
     "tag": "Personal",
     "q": "Why should we hire you?",
-    "a": "I have experience in a grocery store, and I am hardworking and trustworthy. I am willing to learn, follow instructions and carry out my duties responsibly."
+    "a": "I have grocery store experience. I am hardworking, reliable and eager to learn.",
+    "icon": "⭐ 🏪",
+    "cue": "Experience · attitude"
   },
   {
     "tag": "Personal",
     "q": "Where do you see yourself in the future?",
-    "a": "I hope to become a skilled and reliable employee, improve my English and gain valuable work experience while building a better future for my family."
+    "a": "I want to improve my skills, gain work experience and build a better future.",
+    "icon": "🎯 🌱",
+    "cue": "Learn · grow"
   },
   {
     "tag": "Job Skills",
     "q": "Do you know what FIFO means? Why is it important?",
-    "a": "Yes. FIFO means First In, First Out. Older stock is sold or used before newer stock according to store procedures. This helps reduce waste and maintain product quality.",
-    "img": 3
+    "a": "Yes. FIFO means First In, First Out. We sell older stock first to reduce waste.",
+    "icon": "📦 ➡️",
+    "cue": "Older stock first"
   },
   {
     "tag": "Job Skills",
     "q": "How do you arrange products on shelves?",
-    "a": "I would place products in the correct sections, check their condition and expiry dates, rotate stock, refill empty spaces and keep labels visible."
+    "a": "I arrange products neatly, check expiry dates and put older stock in front.",
+    "icon": "🥫 🗂️",
+    "cue": "Arrange · rotate · refill"
   },
   {
     "tag": "Job Skills",
     "q": "How do you pack fragile items such as glass jars or eggs?",
-    "a": "I would handle fragile items carefully, separate them from heavy items and pack them securely to prevent damage."
+    "a": "I pack fragile items carefully and keep heavy items separate.",
+    "icon": "🥚 📦",
+    "cue": "Protect fragile items"
   },
   {
     "tag": "Job Skills",
     "q": "What would you do if you found an expired product?",
-    "a": "I would remove it from sale according to store procedures and inform my supervisor.",
-    "img": 9
+    "a": "I would remove the expired product from sale and inform my supervisor.",
+    "icon": "📅 🚫",
+    "cue": "Remove · report"
   },
   {
     "tag": "Job Skills",
     "q": "What would you do if a glass bottle broke on the floor?",
-    "a": "I would keep people away from the area, inform my supervisor and use the correct equipment to clean up safely. I would never pick up broken glass with bare hands."
+    "a": "I would keep people away, report it and clean the broken glass with proper equipment.",
+    "icon": "🧹 ⚠️",
+    "cue": "Secure · clean safely"
   },
   {
     "tag": "Job Skills",
     "q": "Have you used a hand pallet truck or pallet jack?",
-    "a": "I am willing to learn how to use a pallet jack safely. I would explain my actual experience and use it only after receiving the necessary training and permission."
+    "a": "I understand its purpose and am willing to learn to use it safely with proper training.",
+    "icon": "📦 🛠️",
+    "cue": "Training · safe operation"
   },
   {
     "tag": "Job Skills",
     "q": "What is a deli and how do you prevent cross-contamination?",
-    "a": "A deli is a section that sells foods such as prepared foods, cold meats and cheese. I would separate raw and ready-to-eat foods, use clean equipment and follow food-safety procedures."
+    "a": "A deli sells prepared foods, meat and cheese. I keep raw and ready-to-eat foods separate and use clean equipment.",
+    "icon": "🧀 🥩",
+    "cue": "Separate raw and cooked"
   },
   {
     "tag": "Job Skills",
     "q": "How do you keep a shelf or work area organized?",
-    "a": "I keep products and equipment in their proper places, remove unnecessary items and clean and check the area regularly."
+    "a": "I keep products in their correct places and clean my work area regularly.",
+    "icon": "🧺 ✨",
+    "cue": "Everything in place"
   },
   {
     "tag": "Job Skills",
     "q": "What would you do if a stock delivery is larger than expected?",
-    "a": "I would check priorities with my supervisor, organize the stock safely and ask my team for help if necessary."
+    "a": "I would organize the stock safely and ask my team or supervisor for help.",
+    "icon": "🚚 📦",
+    "cue": "Organize · teamwork"
   },
   {
     "tag": "Job Skills",
     "q": "What would you do if a product label or price does not match the system?",
-    "a": "I would report the difference to my supervisor and follow the correct procedure. I would not change a price without permission."
+    "a": "I would check the label and inform my supervisor about the difference.",
+    "icon": "🏷️ 🔍",
+    "cue": "Check · report"
   },
   {
     "tag": "Customer Service",
     "q": "How do you handle a very busy day?",
-    "a": "I stay calm, prioritize important tasks and cooperate with my team. I work efficiently while maintaining safety and good customer service."
+    "a": "I stay calm, organize my tasks and work efficiently with my team.",
+    "icon": "⏱️ 🤝",
+    "cue": "Stay calm · prioritize"
   },
   {
     "tag": "Customer Service",
     "q": "What would you do with an angry customer?",
-    "a": "I would listen patiently, speak politely and try to resolve the problem within my responsibilities. If necessary, I would ask my supervisor for assistance.",
-    "img": 2
+    "a": "I would listen calmly, speak politely and try to solve the problem. If needed, I would ask my supervisor.",
+    "icon": "😠 🤝",
+    "cue": "Listen · solve"
   },
   {
     "tag": "Customer Service",
     "q": "What if a customer asks something you do not understand?",
-    "a": "I would politely ask the customer to repeat or explain the question. If I still did not understand, I would ask a coworker or supervisor for help."
+    "a": "I would politely ask the customer to repeat the question or ask a coworker for help.",
+    "icon": "👂 💬",
+    "cue": "Ask to repeat"
   },
   {
     "tag": "Customer Service",
     "q": "What if you make a mistake with a customer?",
-    "a": "I would apologize sincerely, correct the mistake as soon as possible and inform my supervisor if necessary. I would learn from the experience."
+    "a": "I would apologize politely, correct my mistake and learn from it.",
+    "icon": "🙏 ✅",
+    "cue": "Apologize · correct"
   },
   {
     "tag": "Customer Service",
     "q": "How do you work with people from different backgrounds?",
-    "a": "I treat everyone with respect, regardless of their culture, religion or nationality. I communicate politely and cooperate with my team."
+    "a": "I respect everyone, communicate politely and work well with people from different backgrounds.",
+    "icon": "🌍 🤝",
+    "cue": "Respect everyone"
   },
   {
     "tag": "Customer Service",
     "q": "How do you handle disagreement with a coworker?",
-    "a": "I would listen to their point of view and discuss the issue calmly. If we could not resolve it, I would seek guidance from our supervisor.",
-    "img": 10
+    "a": "I would listen, talk calmly and try to find a solution together.",
+    "icon": "🤝 💬",
+    "cue": "Discuss calmly"
   },
   {
     "tag": "Customer Service",
     "q": "What if your supervisor corrects you in front of others?",
-    "a": "I would listen respectfully, accept the feedback and correct my work. If I needed clarification, I would ask politely at a suitable time."
+    "a": "I would listen respectfully, accept the correction and improve my work.",
+    "icon": "👂 ✅",
+    "cue": "Accept feedback"
   },
   {
     "tag": "Safety & Hygiene",
     "q": "How do you maintain personal hygiene at work?",
-    "a": "I wash my hands properly, wear clean work clothes, maintain good personal hygiene and follow workplace food-safety procedures.",
-    "img": 7
+    "a": "I wash my hands, wear clean clothes and follow hygiene rules.",
+    "icon": "🧼 👕",
+    "cue": "Wash · clean clothes"
   },
   {
     "tag": "Safety & Hygiene",
     "q": "When should food-handling gloves be changed?",
-    "a": "I would change gloves when they are damaged or dirty and when changing tasks that could cause contamination. I would also wash my hands as required."
+    "a": "I change gloves when they are dirty, damaged or when changing tasks that could cause contamination.",
+    "icon": "🧤 🔄",
+    "cue": "Change when dirty"
   },
   {
     "tag": "Safety & Hygiene",
     "q": "What if a food item smells bad or seems spoiled?",
-    "a": "I would remove it from sale or service, keep it separate and inform my supervisor. I would not taste it or return it to the shelf."
+    "a": "I would remove the spoiled food from sale and inform my supervisor.",
+    "icon": "🍎 🚫",
+    "cue": "Separate · report"
   },
   {
     "tag": "Safety & Hygiene",
     "q": "What would you do if you cut your finger at work?",
-    "a": "I would stop the task, report the injury and get first aid. I would protect food and surfaces from contamination and return to work when it is safe."
+    "a": "I would stop working, inform my supervisor and get first aid before returning safely.",
+    "icon": "🩹 🩺",
+    "cue": "Stop · first aid"
   },
   {
     "tag": "Safety & Hygiene",
     "q": "How do you clean a slicer or machine safely?",
-    "a": "I would follow training and the equipment safety procedure, switch off and isolate the machine as required, and use the correct protective equipment before cleaning."
+    "a": "I would switch off and isolate the machine as required, then clean it according to the safety instructions.",
+    "icon": "🔌 🧽",
+    "cue": "Isolate · clean safely"
   },
   {
     "tag": "Safety & Hygiene",
     "q": "What would you do if you saw a safety hazard?",
-    "a": "I would keep people away if necessary, report it immediately and follow the correct safety procedure to prevent an accident."
+    "a": "I would keep people away from the danger and report it to my supervisor.",
+    "icon": "⚠️ 📣",
+    "cue": "Warn · report"
   },
   {
     "tag": "Safety & Hygiene",
     "q": "Why is cleanliness important in retail and food areas?",
-    "a": "Cleanliness helps prevent contamination and accidents, protects customers and employees and creates a professional shopping environment."
+    "a": "Cleanliness prevents contamination and accidents and keeps customers and staff safe.",
+    "icon": "✨ 🛡️",
+    "cue": "Clean means safe"
   },
   {
     "tag": "Israel & Rules",
     "q": "Why do you want to work in Israel?",
-    "a": "I would like to gain international work experience, improve my skills and earn a stable income to support my family through honest work."
+    "a": "I want to gain work experience, earn a stable income and support my family.",
+    "icon": "🇮🇱 💼",
+    "cue": "Work · support family"
   },
   {
     "tag": "Israel & Rules",
     "q": "Are you willing to follow Israeli laws and workplace rules?",
-    "a": "Yes, absolutely. I will respect Israeli laws, my work permit, my employment agreement and all workplace and safety procedures."
+    "a": "Yes, absolutely. I will respect Israeli laws and follow workplace rules.",
+    "icon": "📜 ✅",
+    "cue": "Follow the rules"
   },
   {
     "tag": "Israel & Rules",
     "q": "Can you work shifts, overtime or weekends?",
-    "a": "Yes, I am willing to work long hours, shifts, overtime and weekends when required, according to my employment contract and lawful work schedule."
+    "a": "Yes, I am willing to work long hours, shifts, overtime and weekends when required under my contract.",
+    "icon": "🕒 💪",
+    "cue": "Flexible · ready to work"
   },
   {
     "tag": "Israel & Rules",
     "q": "How long do you plan to stay in Israel?",
-    "a": "I plan to work for the full period permitted by my contract and legal work status. I will follow the official rules when that period ends."
+    "a": "I plan to work for the full period allowed by my contract and work permit.",
+    "icon": "📅 🧳",
+    "cue": "Complete the contract"
   },
   {
     "tag": "Israel & Rules",
     "q": "What do you know about foreign-worker rights in Israel?",
-    "a": "I understand that foreign workers have employment protections, including rules concerning wages, working conditions, rest and insurance. I will read my contract and follow official guidance."
+    "a": "Foreign workers have rights regarding wages, working conditions, rest and insurance.",
+    "icon": "📄 🛡️",
+    "cue": "Contract · worker rights"
   },
   {
     "tag": "Israel & Rules",
     "q": "What would you do if you do not understand a workplace rule?",
-    "a": "I would politely ask my supervisor to explain it so I can understand and follow the rule correctly."
+    "a": "I would politely ask my supervisor to explain the rule.",
+    "icon": "❓ 💬",
+    "cue": "Ask for guidance"
   },
   {
     "tag": "Israel & Rules",
     "q": "How would you respond to a security alert?",
-    "a": "I would remain calm, follow instructions from the authorities and my employer, and move to the designated protected area as directed."
+    "a": "I would stay calm, follow official instructions and move to the designated protected area.",
+    "icon": "🚨 🛡️",
+    "cue": "Stay calm · seek shelter"
   },
   {
     "tag": "Israel & Rules",
     "q": "What do you know about Shabbat?",
-    "a": "Shabbat is the Jewish weekly day of rest, from Friday evening to Saturday evening. I respect this tradition and will follow the lawful work arrangements that apply to me."
+    "a": "Shabbat is the Jewish day of rest from Friday evening to Saturday evening. I respect it.",
+    "icon": "🕯️ 📅",
+    "cue": "Friday to Saturday"
   },
   {
     "tag": "Situational",
     "q": "Tell me about a time you made a mistake at work.",
-    "a": "When I make a mistake, I take responsibility, inform my supervisor if necessary and correct it. One real example is [your actual example]. I learn from mistakes and try not to repeat them."
+    "a": "I take responsibility for mistakes, correct them and learn how to prevent them.",
+    "icon": "🔄 ✅",
+    "cue": "Correct · learn",
+    "tip": "If asked for an example, briefly describe something that actually happened."
   },
   {
     "tag": "Situational",
     "q": "How do you prioritize when several tasks arrive at once?",
-    "a": "I identify urgent tasks and safety concerns first, organize the remaining work by priority and ask my supervisor if the order is unclear."
+    "a": "I complete urgent tasks first and then finish the other tasks in order.",
+    "icon": "📋 ⏱️",
+    "cue": "Urgent tasks first"
   },
   {
     "tag": "Situational",
     "q": "What would you do if you were given an instruction you thought was unsafe?",
-    "a": "I would respectfully explain my concern and ask my supervisor for guidance. If there was an immediate danger, I would stop and follow safety procedures."
+    "a": "I would explain my concern politely and ask my supervisor for guidance before continuing.",
+    "icon": "🛑 🛡️",
+    "cue": "Stop · ask safely"
   },
   {
     "tag": "Situational",
     "q": "How do you stay calm under pressure?",
-    "a": "I stay focused, deal with tasks one at a time, communicate with my team and maintain safety and quality even when the workplace is busy.",
-    "img": 8
+    "a": "I stay calm, focus on one task at a time and work carefully.",
+    "icon": "😌 🎯",
+    "cue": "Calm · focus"
   },
   {
     "tag": "Situational",
     "q": "What if your coworker needs help during a busy period?",
-    "a": "I would help my coworker whenever possible while making sure my own urgent duties are covered and communicating with the team."
+    "a": "I would help my coworker while making sure my own duties are covered.",
+    "icon": "🤝 💪",
+    "cue": "Support the team"
   },
   {
     "tag": "Situational",
     "q": "What if you do not know how to operate a machine?",
-    "a": "I would politely ask my supervisor for training and instructions. I would use the machine only when I am trained and authorized."
+    "a": "I would ask my supervisor for proper training before using the machine.",
+    "icon": "🛠️ 📚",
+    "cue": "Ask for training"
   },
   {
     "tag": "Situational",
     "q": "What if a customer asks you to break a company rule?",
-    "a": "I would politely explain that I must follow company rules. If the situation required an exception, I would ask my supervisor."
+    "a": "I would politely explain that I must follow company rules and ask my supervisor if needed.",
+    "icon": "📋 🙏",
+    "cue": "Respect company rules"
   },
   {
     "tag": "Situational",
     "q": "What if you are late or cannot attend a shift?",
-    "a": "I would inform my supervisor as early as possible, explain the situation honestly and follow the attendance procedure."
+    "a": "I would inform my supervisor as soon as possible and explain the situation.",
+    "icon": "⏰ 📞",
+    "cue": "Inform early"
   },
   {
     "tag": "Situational",
     "q": "Are you comfortable learning new tasks?",
-    "a": "Yes, absolutely. I am happy to learn new tasks, follow instructions and practise safely until I can do the work correctly."
+    "a": "Yes, absolutely. I enjoy learning new tasks and following instructions.",
+    "icon": "📚 🌱",
+    "cue": "Ready to learn"
   },
   {
     "tag": "Situational",
     "q": "Do you have any questions for us?",
-    "a": "Yes, thank you. Could you please tell me more about the daily duties and the training provided for this position?"
+    "a": "Yes, thank you. Could you please explain the daily duties and training for this job?",
+    "icon": "💬 💼",
+    "cue": "Ask about duties"
   },
   {
     "tag": "Personal",
     "q": "Can you tell me about a responsibility you handled without being reminded?",
-    "a": "I try to notice tasks that need attention and complete them responsibly. One example from my actual work is [your real example]. I ask my supervisor when priorities are unclear."
+    "a": "I look for work that needs attention and help keep the workplace clean and organized.",
+    "icon": "👀 🧹",
+    "cue": "Notice · take initiative",
+    "tip": "If asked for an example, describe a task you really carried out."
   },
   {
     "tag": "Personal",
     "q": "What motivates you to do a good job?",
-    "a": "I am motivated by earning trust, supporting my family, learning new skills and doing my work well. I take pride in being a reliable employee."
+    "a": "I am motivated by supporting my family, learning new skills and doing my job well.",
+    "icon": "🎯 ❤️",
+    "cue": "Family · responsibility"
   },
   {
     "tag": "Job Skills",
     "q": "What would you do if shelves are empty but stock is available in the back?",
-    "a": "I would check the product, bring the stock safely, rotate it according to store procedures and refill the shelves neatly."
+    "a": "I would bring the stock safely, rotate older stock first and refill the shelves neatly.",
+    "icon": "📦 🥫",
+    "cue": "Refill the shelves"
   },
   {
     "tag": "Customer Service",
     "q": "How would you help a customer who is in a hurry?",
-    "a": "I would listen carefully and help the customer promptly and politely without compromising accuracy or safety."
+    "a": "I would help the customer quickly and politely without making mistakes.",
+    "icon": "⏱️ 🛒",
+    "cue": "Quick · polite"
   },
   {
     "tag": "Customer Service",
     "q": "What would you do if two customers need help at the same time?",
-    "a": "I would acknowledge both customers politely, assist the more urgent request first and ask a coworker for help if available."
+    "a": "I would greet both customers, help one at a time and ask a coworker for help if needed.",
+    "icon": "👥 🤝",
+    "cue": "Acknowledge both"
   },
   {
     "tag": "Safety & Hygiene",
     "q": "What should you do before starting a food-handling task?",
-    "a": "I would wash my hands, wear clean protective clothing as required and check that the equipment and work area are clean and ready."
+    "a": "I would wash my hands and make sure my equipment and work area are clean.",
+    "icon": "🧼 🧤",
+    "cue": "Wash · prepare"
   },
   {
     "tag": "Israel & Rules",
     "q": "What would you do if your employment contract says something you do not understand?",
-    "a": "I would politely ask for an explanation before signing or agreeing. I would seek appropriate assistance if necessary."
+    "a": "I would politely ask for an explanation before signing the contract.",
+    "icon": "📄 ❓",
+    "cue": "Understand before signing"
   },
   {
     "tag": "Israel & Rules",
     "q": "What will you do if your work permit or visa conditions are different from what you expected?",
-    "a": "I would follow the actual visa and permit conditions and ask the employer or appropriate authority for clarification."
+    "a": "I would follow my visa conditions and ask the employer or authority for clarification.",
+    "icon": "🛂 📄",
+    "cue": "Follow permit rules"
   },
   {
     "tag": "Situational",
     "q": "What would you do if a coworker asked you to hide a mistake?",
-    "a": "I would politely refuse, help correct the mistake and report it when necessary. I believe honesty is important in the workplace."
+    "a": "I would not hide the mistake. I would help correct it and report it if necessary.",
+    "icon": "✅ 📣",
+    "cue": "Correct · report"
   },
   {
     "tag": "Situational",
     "q": "How would you react if an interviewer did not understand your answer?",
-    "a": "I would remain calm and explain my answer again using simple words or an example. I would politely ask which part needs clarification."
+    "a": "I would stay calm and explain my answer again using simple words.",
+    "icon": "🗣️ 💬",
+    "cue": "Explain simply"
   },
   {
     "tag": "Personal",
     "q": "What is your current job and job role?",
-    "a": "[current job answer]"
+    "a": "[current job answer]",
+    "icon": "💼 🏪",
+    "cue": "Job role · duties",
+    "tip": "The service certificate confirms a previous job, not a current job."
   },
   {
     "tag": "Personal",
     "q": "How many jobs have you worked in during the past five years?",
-    "a": "I worked as a Grocery Store Assistant at Siyarata Stores until April 2022. During the past five years, I have worked in [actual number] jobs. My other employment, if any, is [actual work history]."
+    "a": "My documented job was at Siyarata Stores until April 2022. If it was my only job in the past five years, my answer is: “I worked in one job during that period.”",
+    "icon": "📅 💼",
+    "cue": "Employment history",
+    "tip": "Count all jobs you actually held in the five-year period."
   },
   {
     "tag": "Job Skills",
     "q": "What position did you hold at Siyarata Stores?",
-    "a": "I worked as a Grocery Store Assistant."
+    "a": "I worked as a Grocery Store Assistant.",
+    "icon": "🏪 👤",
+    "cue": "Grocery Store Assistant"
   },
   {
     "tag": "Job Skills",
     "q": "What were your responsibilities at Siyarata Stores?",
-    "a": "My responsibilities included [your actual duties]. I supported the daily work of the grocery store and carried out the tasks assigned to me."
+    "a": "My responsibilities included [your actual duties].",
+    "icon": "🛒 📦",
+    "cue": "Customers · stock · cleanliness"
   },
   {
     "tag": "Job Skills",
     "q": "What maintenance procedures do you follow in a supermarket or store?",
-    "a": "I keep the workplace clean and organized, check for damage and hazards, clean equipment according to instructions and report problems. I do not carry out technical repairs without training.",
-    "img": 6
+    "a": "I keep the store clean and organized, check for damage and report problems to my supervisor.",
+    "icon": "🧹 🛠️",
+    "cue": "Clean · check · report"
   },
   {
     "tag": "Safety & Hygiene",
     "q": "What are the main safety rules you should follow inside a supermarket or store?",
-    "a": "I keep walkways clear, handle heavy items safely, follow hygiene procedures, report hazards and accidents and use equipment only when trained. I also follow emergency instructions.",
-    "img": 5
+    "a": "I keep walkways clear, handle stock safely, follow hygiene rules and report hazards.",
+    "icon": "⚠️ 🛡️",
+    "cue": "Clear paths · safe handling"
   },
   {
     "tag": "Situational",
     "q": "Can you do a job in Israel that you have never done before?",
-    "a": "Yes, I am willing to learn any new duties within my role. I will listen carefully, receive training and follow my supervisor's instructions."
+    "a": "Yes, absolutely. I am willing to learn new work and follow the training and instructions.",
+    "icon": "🌱 💪",
+    "cue": "Yes · learn new work"
   },
   {
     "tag": "Situational",
     "q": "If you are given several tasks at the same time, how do you manage your time?",
-    "a": "I organize tasks by priority, deal with urgent or safety-related issues first and complete the work carefully. If necessary, I ask my supervisor for guidance.",
-    "img": 4
+    "a": "I organize my tasks by importance, finish urgent work first and ask for help if needed.",
+    "icon": "📋 ⏰",
+    "cue": "Plan · prioritize"
   },
   {
     "tag": "Personal",
     "q": "What are your key skills?",
-    "a": "I am hardworking and trustworthy. I have grocery store experience and am willing to develop skills in customer service, stock handling and teamwork. I follow instructions carefully."
+    "a": "My key skills are grocery store work, teamwork, following instructions and working responsibly.",
+    "icon": "💪 🤝",
+    "cue": "Store skills · teamwork"
   },
   {
     "tag": "Personal",
     "q": "Did you properly follow the rules in your previous job?",
-    "a": "Yes, I understand the importance of workplace rules. I follow instructions and safety procedures and carry out my duties responsibly."
+    "a": "Yes. I understand the importance of following workplace rules and instructions.",
+    "icon": "✅ 📋",
+    "cue": "Respect workplace rules"
   },
   {
     "tag": "Israel & Rules",
     "q": "What is your most important reason for wanting to go to Israel?",
-    "a": "My main reason is to secure stable legal employment, gain valuable experience and support my family through hard work."
+    "a": "My main reason is to work, earn a stable income and support my family.",
+    "icon": "🇮🇱 ❤️",
+    "cue": "Income · future"
   },
   {
     "tag": "Israel & Rules",
     "q": "How do you know that the employment opportunities in Israel can provide good income?",
-    "a": "I learned about the employment opportunity through the recruitment process. I hope to earn a stable income and will confirm my salary and working conditions from the official employment agreement."
+    "a": "I learned about the opportunity through recruitment. I hope to earn a stable income under my employment contract.",
+    "icon": "💰 📄",
+    "cue": "Income · contract"
   },
   {
     "tag": "Israel & Rules",
     "q": "What do you know about Israel?",
-    "a": "Israel is a country in the Middle East on the Mediterranean coast. Hebrew is its state language, and its currency is the New Israeli Shekel. I respect its laws, culture and people."
+    "a": "Israel is in the Middle East. Hebrew is its state language and the currency is the New Israeli Shekel.",
+    "icon": "🇮🇱 💰",
+    "cue": "Country · Hebrew · shekel"
   },
   {
     "tag": "Safety & Hygiene",
     "q": "What would you do if you were injured while working in Israel?",
-    "a": "I would stop work if necessary, inform my supervisor, obtain first aid or medical assistance and follow the workplace accident-reporting procedure."
+    "a": "I would inform my supervisor, get first aid or medical help and follow the accident procedure.",
+    "icon": "🩹 📞",
+    "cue": "Report · medical help"
   },
   {
     "tag": "Israel & Rules",
     "q": "What are your plans after your legal work contract ends?",
-    "a": "I plan to complete my contract responsibly. When my legal work period ends, I will follow the official requirements and return to Sri Lanka unless a lawful extension is permitted."
+    "a": "I will complete my contract and return to Sri Lanka when my legal work period ends, unless a lawful extension is granted.",
+    "icon": "🧳 🇱🇰",
+    "cue": "Finish · return"
   },
   {
     "tag": "Personal",
-    "q": "What is the correct way to answer a Yes/No health question in an official interview form?",
-    "a": "I will answer truthfully according to my actual medical condition and the exact question on the official form."
+    "q": "How would you answer a medical-fitness question on an official form?",
+    "a": "If medically fit: “Yes, I am medically fit and ready to work.” If there is a relevant condition, state it accurately.",
+    "icon": "🩺 ✅",
+    "cue": "Medical fitness"
   },
   {
     "tag": "Yes / No",
     "q": "Are you willing to follow your employer’s instructions and workplace procedures?",
-    "a": "Yes, I am willing to follow my employer's lawful instructions and procedures carefully. I will ask if anything is unclear."
+    "a": "Yes. I will follow instructions and workplace procedures carefully.",
+    "icon": "👂 📋",
+    "cue": "Follow instructions"
   },
   {
     "tag": "Yes / No",
     "q": "Can you work as part of a team?",
-    "a": "Yes, I enjoy cooperating with others and supporting my team. I will carry out my duties responsibly."
+    "a": "Yes. I enjoy working with others and helping my team.",
+    "icon": "🤝 👥",
+    "cue": "Teamwork"
   },
   {
     "tag": "Yes / No",
     "q": "Can you work in a busy supermarket or store environment?",
-    "a": "Yes, I am willing to work in a busy store and remain calm, efficient and attentive to safety."
+    "a": "Yes. I am ready to work efficiently in a busy store.",
+    "icon": "🏪 ⚡",
+    "cue": "Busy store"
   },
   {
     "tag": "Yes / No",
     "q": "Are you willing to learn a job you have not done before?",
-    "a": "Yes, I am happy to learn new duties and receive the necessary training."
+    "a": "Yes. I am willing to learn new tasks and receive training.",
+    "icon": "📚 🌱",
+    "cue": "Learn new duties"
   },
   {
     "tag": "Yes / No",
     "q": "Can you work according to the company roster within your legal conditions?",
-    "a": "Yes, I am flexible and willing to work according to the company's lawful roster and my contract."
+    "a": "Yes. I am flexible and willing to follow the lawful company roster.",
+    "icon": "🗓️ ⏰",
+    "cue": "Flexible roster"
   },
   {
     "tag": "Yes / No",
     "q": "Are you willing to follow food-safety and hygiene procedures?",
-    "a": "Yes, absolutely. I understand that food safety and hygiene protect customers and employees."
+    "a": "Yes. I will follow all food-safety and hygiene rules.",
+    "icon": "🧼 🛡️",
+    "cue": "Hygiene first"
   },
   {
     "tag": "Yes / No",
     "q": "Can you ask for help when you do not understand an instruction?",
-    "a": "Yes, I will politely ask my supervisor or a coworker for clarification rather than guess."
+    "a": "Yes. I will politely ask for help when I do not understand.",
+    "icon": "❓ 💬",
+    "cue": "Ask for help"
   },
   {
     "tag": "Yes / No",
     "q": "Are you willing to respect people from different religions and backgrounds?",
-    "a": "Yes, I respect people of all religions and backgrounds and will treat everyone politely."
+    "a": "Yes. I respect people from all religions and backgrounds.",
+    "icon": "🌍 🤝",
+    "cue": "Respect differences"
   },
   {
     "tag": "Yes / No",
     "q": "Can you work with a supervisor who gives direct instructions?",
-    "a": "Yes, I will listen carefully, accept feedback respectfully and follow the instructions given to me."
+    "a": "Yes. I will listen carefully and follow my supervisor's instructions.",
+    "icon": "👂 ✅",
+    "cue": "Listen · accept feedback"
   },
   {
     "tag": "Yes / No",
     "q": "Can you handle several tasks at the same time by setting priorities?",
-    "a": "Yes, I can organize tasks by priority and ask my supervisor for guidance when needed."
+    "a": "Yes. I can organize my tasks and complete urgent work first.",
+    "icon": "📋 ⏱️",
+    "cue": "Set priorities"
   },
   {
     "tag": "Yes / No",
     "q": "Will you report a safety hazard or workplace accident?",
-    "a": "Yes, I will report hazards and accidents promptly and follow the correct safety procedures."
+    "a": "Yes. I will report hazards and accidents immediately.",
+    "icon": "⚠️ 📣",
+    "cue": "Report hazards"
   },
   {
     "tag": "Yes / No",
     "q": "Will you operate equipment only when properly trained or authorized?",
-    "a": "Yes, I will use equipment only when I have the necessary training and authorization."
+    "a": "Yes. I will use equipment only after proper training and authorization.",
+    "icon": "🛠️ 🛡️",
+    "cue": "Training before use"
   },
   {
     "tag": "Yes / No",
     "q": "Will you respect your employment agreement and legal work status?",
-    "a": "Yes, I will respect my employment agreement, visa, work permit and Israeli laws."
+    "a": "Yes. I will respect my employment agreement, visa and work permit.",
+    "icon": "📄 🛂",
+    "cue": "Respect contract and visa"
   },
   {
     "tag": "Yes / No",
     "q": "Are you willing to maintain a clean and organized workplace?",
-    "a": "Yes, I am willing to keep my workplace clean, safe and organized throughout my shift."
+    "a": "Yes. I will keep my workplace clean and organized.",
+    "icon": "🧹 ✨",
+    "cue": "Clean workplace"
   },
   {
     "tag": "Yes / No",
     "q": "Are you willing to help with different duties when lawfully assigned and trained?",
-    "a": "Yes, I am happy to help with different assigned duties and learn the correct procedures."
+    "a": "Yes. I am willing to help with different assigned duties and learn the correct procedures.",
+    "icon": "🤝 📦",
+    "cue": "Help with other duties"
   },
   {
     "tag": "Yes / No",
     "q": "Can you communicate politely with customers?",
-    "a": "Yes, I will listen carefully, speak respectfully and help customers as much as I can."
+    "a": "Yes. I will speak politely and help customers.",
+    "icon": "🛒 💬",
+    "cue": "Polite customer service"
   },
   {
     "tag": "Yes / No",
     "q": "Do you have any medical or health condition that must be declared on this official form?",
-    "a": "Answer Yes or No according to your actual health circumstances. If Yes, provide the required accurate details."
+    "a": "If there is no condition to declare: “No, I have no condition to declare.” Otherwise answer Yes and give the required details.",
+    "icon": "🩺 📋",
+    "cue": "Answer medical declaration",
+    "tip": "A health declaration is not a practice score. Use your actual medical information."
   },
   {
     "tag": "Yes / No",
     "q": "Do you have any legal, document or work-status issue that must be declared on the official form?",
-    "a": "Answer Yes or No truthfully according to your actual circumstances and documents. Provide accurate details if required."
+    "a": "If there is no issue to declare: “No, I have no issue to declare.” Otherwise answer Yes and explain accurately.",
+    "icon": "🛂 📋",
+    "cue": "Answer official declaration",
+    "tip": "Use the answer that matches your actual documents."
   },
   {
     "tag": "Personal",
     "q": "What are your strengths?",
-    "a": "I am hardworking, trustworthy, responsible and willing to learn. I respect others and take my duties seriously."
+    "a": "I am hardworking, trustworthy, responsible and willing to learn.",
+    "icon": "⭐ 💪",
+    "cue": "Reliable · hardworking"
   },
   {
     "tag": "Personal",
     "q": "What is your weakness / area to improve?",
-    "a": "I am working on improving my spoken English. I practise regularly to become more confident."
+    "a": "I am improving my English through daily practice.",
+    "icon": "🗣️ 📚",
+    "cue": "Improve English"
+  },
+  {
+    "tag": "Yes / No",
+    "q": "Are you medically fit to work?",
+    "a": "Yes, I am medically fit and ready to work.",
+    "icon": "🩺 💪",
+    "cue": "Fit · ready to work",
+    "tip": "Sample answer for a medically fit candidate. Use it only if it is accurate."
+  },
+  {
+    "tag": "Yes / No",
+    "q": "Can you work long hours?",
+    "a": "Yes, I am willing to work long hours and overtime when required under my employment contract.",
+    "icon": "🕒 💪",
+    "cue": "Flexible · hardworking"
   }
 ];
 
@@ -1019,24 +1252,26 @@
   /* ---------------- Profile / Myself ---------------- */
   function getProfile(){ return loadJSON(STORAGE_PROFILE, null); }
 
+  var SAMPLE_DUTIES = "helping customers, packing groceries, arranging products on shelves, replenishing stock and keeping the store clean and organized";
   function renderMyself(){
     var p = getProfile() || {};
     var name = escapeHTML(p.name || "[your name]");
     var town = escapeHTML(p.town || "[your town]");
+    var duties = escapeHTML(p.duties || SAMPLE_DUTIES);
     var html =
       "<p>Good morning. Thank you for giving me this opportunity. My name is <span class=\"fill\">" + name +
       "</span>, and I am from <span class=\"fill\">" + town +
       "</span>, Sri Lanka. I worked as a Grocery Store Assistant at Siyarata Stores in Kotuwegoda, Matara, from 1 November 2020 to 30 April 2022.</p>" +
-      (p.duties ? "<p>My responsibilities included " + escapeHTML(p.duties) + ".</p>" : "<p>I have practical grocery store experience. I am ready to help customers, arrange products, support stock handling and maintain a clean and organized workplace.</p>") +
+      "<p>My duties included " + duties + ".</p>" +
       (p.currentJob ? "<p>I currently work as " + escapeHTML(p.currentJob) + (p.currentDuties ? ". My responsibilities include " + escapeHTML(p.currentDuties) : "") + ".</p>" : "") +
-      "<p>I am hardworking, trustworthy, reliable and willing to learn. I follow instructions carefully and work well with others. I am ready to work responsibly in Israel, gain new experience and support my family. Thank you.</p>";
+      "<p>I am hardworking, trustworthy and willing to learn. I work well with others and follow instructions. I am ready to work in Israel and support my family. Thank you.</p>";
     $("#myself-letter").innerHTML = html;
   }
 
   function fillProfileForm(form, prefix, p){
     $("#" + prefix + "-name", form).value = (p && p.name) || "";
     $("#" + prefix + "-town", form).value = (p && p.town) || "";
-    $("#" + prefix + "-duties", form).value = (p && p.duties) || "";
+    $("#" + prefix + "-duties", form).value = (p && p.duties) || SAMPLE_DUTIES;
     $("#" + prefix + "-current", form).value = (p && p.currentJob) || "";
     $("#" + prefix + "-current-duties", form).value = (p && p.currentDuties) || "";
   }
@@ -1095,10 +1330,10 @@
   function modelAnswer(item){
     var p = getProfile() || {};
     if(item.a === "[current job answer]"){
-      return p.currentJob ? "I currently work as " + p.currentJob + (p.currentDuties ? ". My responsibilities include " + p.currentDuties : "") + "." : "My current employment is [your actual job and duties]. If you are not currently employed, explain that honestly. My documented previous role was Grocery Store Assistant at Siyarata Stores.";
+      return p.currentJob ? "I currently work as " + p.currentJob + (p.currentDuties ? ". My responsibilities include " + p.currentDuties : "") + "." : "My previous job was as a Grocery Store Assistant at Siyarata Stores. My duties included " + (p.duties || SAMPLE_DUTIES) + ".";
     }
     return item.a.replace("[your name]", function(){return p.name || "[your name]";})
-      .replace("[your actual duties]",function(){return p.duties || "[your actual duties]";});
+      .replace("[your actual duties]",function(){return p.duties || SAMPLE_DUTIES;});
   }
   function renderQuestions(){
     var wrap = $("#qlist");
@@ -1114,7 +1349,7 @@
           '</button>' +
           '<div class="qbody">' +
             '<div class="qanswer">' + escapeHTML(modelAnswer(item)) + '</div>' +
-            (item.img ? '<div class="qimg-wrap"><img src="images/Qs/' + item.img + '.jpg" alt="' + escapeHTML(item.tag) + '" loading="lazy" onerror="this.parentElement.style.display=\'none\';"></div>' : '') +
+            '<div class="memory-art" data-topic="' + escapeHTML(item.tag) + '"><div class="memory-icons" aria-hidden="true">' + item.icon.split(" ").map(function(icon){return '<span>' + escapeHTML(icon) + '</span>';}).join("") + '</div><div class="memory-cue">' + escapeHTML(item.cue) + '</div></div>' +
             (item.tip ? '<div class="qtip"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><line x1="12" y1="8" x2="12" y2="8.01"/><line x1="12" y1="11" x2="12" y2="16"/></svg><span>' + escapeHTML(item.tip) + '</span></div>' : '') +
           '</div>' +
         '</div>'
